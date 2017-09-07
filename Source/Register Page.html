@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href ="./css/main2.css">
+    <script type = "text/javascript" src ="./js/Register.js.js"></script>
+
+    <![endif]-->
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/main2.css">
+    <title>Register Page</title>
+
+    <script>
+        function validation()
+        {
+            if (localStorage) {
+                form = document.forms["hello"];
+                var nname = form["password"].value;
+                var yname = form["username"].value;
+                var ename = form["email"].value;
+                //name validation
+                localStorage.setItem('xname', yname);
+                localStorage.setItem('lname', ename);
+                localStorage.setItem('pname', nname);
+                return true;
+            }
+        }
+    </script>
+</head>
+<body background="send%20sunil.jpg">
+<center><h1>Registration Page</h1></center> <br>
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-offset-3 col-md-6" ng-controller = "validation">
+            <form name="hello" action="index.html" onsubmit="return validation()">
+                <br>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="name" class="form-control" name="username1" placeholder="Enter your name here">
+                    <p></p>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter your email id here">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">UserName</label>
+                        <input type="username" class="form-control" name="username" placeholder="Enter your user name here">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter your password here">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm" placeholder="Reenter your password">
+                    </div>
+
+                    <button id="btn" ng-click="registerFunction()">
+                        Register
+                    </button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</body>
+</html>
